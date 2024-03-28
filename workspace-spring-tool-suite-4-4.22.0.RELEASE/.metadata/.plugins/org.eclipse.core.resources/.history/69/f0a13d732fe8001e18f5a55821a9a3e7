@@ -1,0 +1,11 @@
+package com.Employee.Exception;
+
+import org.springframework.http.HttpStatus;
+
+@RestControllerAdvice
+public class GlobalException {
+@ExceptionHandling(value=NoDataException.class)
+public ResponseEntity<Employee> noDataExceptionHandling(NoDataException nod) {
+	return new ResponseEntity<>(nod.getmessage(),HttpStatus.NOT_FOUND);
+}
+}

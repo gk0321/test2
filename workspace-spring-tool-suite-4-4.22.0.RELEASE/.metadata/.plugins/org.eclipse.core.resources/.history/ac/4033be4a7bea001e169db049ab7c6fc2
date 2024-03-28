@@ -1,0 +1,49 @@
+package com.example.product;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+@RestController
+@RequestMapping(value="/home")
+public class UseProduct {
+@Autowired
+RestTemplate res;
+	@GetMapping(value="/getproductviaUseProduct/{hsn}")
+	public List<Product>findproduct(@PathVariable long hsn) {
+		String url="http://localhost:8080/product/getAll";
+		String url1="http://localhost:8081/gst/getTaxPercentage/"+hsn;
+		ResponseEntity<Integer>tax=res.exchange(url1,HttpMethod.GET,null,Integer.class);
+		ResponseEntity<List><Product>>pro=res.exchange(url,HttpMethod.GET,null,new ParameterizedTypeReference<List<Product>>()); 
+			return pro.getBody().stream.stream().filter(x->hsn==x.getHsn().map(x-> {
+				x.setPrice(x.getPrice()+(x.getPrice()*tax.getBody()/100));
+				return x;
+		}).toList();
+	}
+}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+	}
+	
+
+}

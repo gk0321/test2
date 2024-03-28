@@ -1,0 +1,9 @@
+package com.example.Student.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import jakarta.persistence.Entity;
+
+public interface studentrepo extends JpaRepository<Entity,Integer> {
+
+}

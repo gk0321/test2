@@ -1,0 +1,16 @@
+package com.example.Student.dao;
+
+import java.util.List;
+
+import jakarta.persistence.Entity;
+
+public class dao {
+	public String inserall(List<Entity>e) {
+		 sturep.saveall(e);
+		return "All record saved succesfully";
+	}
+	public String getall(List<Entity>e) {
+		sturep.findall()
+	}
+
+}

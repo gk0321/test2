@@ -1,0 +1,26 @@
+package com.StudDetails.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.StudDetails.entity.StudDetailsEntity;
+
+
+@Repository
+public class StudDetailsDao {
+	@Autowired
+	StudDetailsDao studao;
+	public String get(List<StudDetailsEntity> a) {
+		return studao.get(a);
+	}
+	public String getter(StudDetailsEntity a)throws Exception {
+		if(a.getAge()<18) {
+			return studao.getter(a);
+		} else {
+		  throw new AgeNotFound("age not valid");
+		}
+	}
+	
+}

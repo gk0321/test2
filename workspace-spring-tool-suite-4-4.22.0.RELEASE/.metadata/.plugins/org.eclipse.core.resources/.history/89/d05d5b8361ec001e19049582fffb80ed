@@ -1,0 +1,5 @@
+package com.StudDetails.repository;
+
+public class StudDetailsRepository {
+
+}

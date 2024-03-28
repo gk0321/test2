@@ -1,0 +1,8 @@
+package com.Employeee.Exception;
+
+public class CustomAge extends Exception {
+	public  Customage(String a) {
+		super(a);
+	}
+ 
+}

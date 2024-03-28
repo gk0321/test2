@@ -1,0 +1,22 @@
+package com.StudentResult.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.StudentResult.entity.StudentResultEntity;
+import com.StudentResult.repository.StudentResultRepo;
+
+public class StudentResultDao {
+	@Autowired
+	StudentResultRepo studentresultrepository;
+
+	public String get(List<StudentResultEntity> a) {
+		studentresultrepository.saveAll(a);
+		return "inserted";
+	}
+public List<StudentResultEntity> find() {
+		
+		return studentresultrepository.findAll();
+		}
+}

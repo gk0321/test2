@@ -1,0 +1,21 @@
+package com.example.gst.Dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.example.gst.Entity.Gst;
+
+@Repository
+public class dao {
+@Autowired
+gstrepo gstrepo;
+public String insertAll(List<Gst>e) {
+	gstrepo.saveAll(e);
+	return "all records saved succesfully";
+}
+public List<Gst>getall() {
+	return gstrepo.findAll();
+}
+}

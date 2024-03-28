@@ -1,0 +1,8 @@
+package com.Employeee.Exception;
+
+public class NoDataException {
+	public NoDataException(String name) {
+		super(name);
+	}
+
+}

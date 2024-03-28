@@ -1,0 +1,12 @@
+package com.example.gst.Dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.gst.Entity.Gst;
+
+public interface gstrepo extends JpaRepository<Gst,Integer> {
+	//@Query(value="select e.taxpercentage from Gst e  where hsn e=:hsn")
+	//public Integer
+	
+
+}

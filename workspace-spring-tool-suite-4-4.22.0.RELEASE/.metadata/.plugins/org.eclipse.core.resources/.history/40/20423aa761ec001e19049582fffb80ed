@@ -1,0 +1,29 @@
+package com.StudDetails.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.StudDetails.entity.StudDetailsEntity;
+import com.StudDetails.repository.StudDetailsRepository;
+
+
+
+
+@Repository
+public class StudDetailsDao {
+	@Autowired
+	StudDetailsRepository studentrepo;
+	public String getter(List<StudDetailsEntity> a) {
+		studentrepo.saveAll(a);
+		return "saved succesfully";
+	}
+
+	public String get(StudDetailsEntity e) {
+		studentrepo.save(e);
+		return "All records saved everything";
+	}
+	
+	
+}

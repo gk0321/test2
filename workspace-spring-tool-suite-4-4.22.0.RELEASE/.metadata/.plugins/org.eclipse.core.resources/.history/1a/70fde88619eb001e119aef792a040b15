@@ -1,0 +1,5 @@
+package com.ProductDao;
+
+public interface Productrepo {
+
+}

@@ -1,0 +1,22 @@
+package com.example.Student.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import jakarta.persistence.Entity;
+@Autowired
+public class dao {
+	studentrepo sturep
+	public String inserall(List<Entity>e) {
+		 sturep.saveall(e);
+		return "All record saved succesfully";
+	}
+	public String getall(List<Entity>e) {
+		sturep.findall();
+	}
+
+	public String update (List<Entity> e) {
+		return sturep.saveall(e);
+	}
+}

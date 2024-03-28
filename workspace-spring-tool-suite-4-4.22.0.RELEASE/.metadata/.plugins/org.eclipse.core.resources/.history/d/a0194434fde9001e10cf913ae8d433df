@@ -1,0 +1,31 @@
+package com.example.Student.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.Student.Entity.student;
+import com.example.Student.repo.studentrepo;
+
+import jakarta.persistence.Entity;
+
+public class dao {
+	@Autowired
+	studentrepo sturep;
+	public String insertall(List<student>e) {
+		 sturep.saveAll(e);
+		return "All record saved succesfully";
+	}
+	public List<student> getall() {
+		return sturep.findAll();
+	}
+
+	public String update (List<student> e) {
+		return sturep.saveAll(e);
+	}
+	public String dele(int a) {
+		sturep.deleteByid(a);
+		return "delete succesfully";
+		
+	}
+}

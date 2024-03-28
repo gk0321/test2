@@ -1,0 +1,13 @@
+package com.example.product.Controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RestMapping(value="/product")
+public class controller {
+	@AutoWired
+	Service prdserv;
+	@PostMapping("/insertAll")
+	public 
+
+}

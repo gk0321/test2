@@ -1,0 +1,5 @@
+package com.Employeee.Repository;
+
+public interface Employeeerepo {
+
+}

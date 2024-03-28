@@ -1,0 +1,13 @@
+package com.example.gst.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.example.gst.Entity.Gst;
+
+public interface gstrepo extends JpaRepository<Gst, Integer> {
+
+	@Query(value = "select e.taxpercentage from Gst e where e.hsn =:hsn")
+	public Integer get(int hsn);
+
+}

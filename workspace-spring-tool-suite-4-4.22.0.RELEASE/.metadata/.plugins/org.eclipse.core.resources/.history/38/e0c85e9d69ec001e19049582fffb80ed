@@ -1,0 +1,26 @@
+package com.StudentResult.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.StudentResult.StudentResultApplication;
+import com.StudentResult.dao.StudentResultDao;
+import com.StudentResult.entity.StudentResultEntity;
+
+@Service
+public class StudentResultService {
+	@Autowired
+	StudentResultDao studentresultdao;
+
+	public String get(List<StudentResultEntity> a) {
+
+		return studentresultdao.get(a);
+	}
+	public List<StudentResultEntity> find(List<StudentResultEntity> a) {
+		
+		a=studentresultdao.find();
+		List<StudentResultApplication>d=a.streamEx.
+	}
+}
